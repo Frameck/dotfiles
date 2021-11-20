@@ -125,3 +125,7 @@ alias ls='ls -lAFht' # aggiungendo la 't' si ordinano per ultima modifica e la '
 function mkcd() {
   mkdir -p "$@" && cd "$_"
 }
+
+# function commit() {
+#   git add -A && git commit -m "$@" && git push
+# }

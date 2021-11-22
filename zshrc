@@ -126,6 +126,17 @@ function mkcd() {
   mkdir -p "$@" && cd "$_"
 }
 
+function commitpush() {
+  git add -A
+  if [ "$1" != "" ] # or better, if [ -n "$1" ]
+  then
+      git commit -m "$1"
+  else
+      git commit -m update
+  fi
+  git push
+}
+
 # function commit() {
 #   git add -A && git commit -m "$@" && git push
 # }

@@ -114,29 +114,71 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-### alias
+
+##### CONFIGURAZIONI PERSONALI #####
+### SYNTAX HIGHLIGHTING
+# man page highlight
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+### PATH
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# Add PHP
+export PATH="$PATH:/Applications/MAMP/bin/php/php7.4.21/bin"
+
+### ALIAS
 alias usage='du -h -d1'
 alias ippublic='curl http://ipecho.net/plain; echo'
 alias iplocal='ipconfig getifaddr en0'
 alias update='source ~/.zshrc'
 alias ls='ls -lAFht' # aggiungendo la 't' si ordinano per ultima modifica e la 'r' ultima modifica reverse
+alias boolean='cd ~/Documents/Code/Boolean'
+alias botfirebase='cd ~/Documents/Code/Telegram/Bot\ Ristoranti/ProvaBotFirebase3'
+alias zoom='open https://us02web.zoom.us/j/81390299868?pwd=ZzVndWg1NnEybDVvT0VkUHZYeXRzZz09'
 
-### functions
+### FUNCTIONS
 function mkcd() {
   mkdir -p "$@" && cd "$_"
+}
+
+# funzione per navigare dentro la cartella Code dove sono presenti tutti i progetti di coding
+function cdcode() {
+  cd ~/Documents/Code/$1
 }
 
 function commitpush() {
   git add -A
   if [ "$1" != "" ] # or better, if [ -n "$1" ]
   then
-      git commit -m "$1"
+    git commit -m "$1"
   else
-      git commit -m update
+    git commit -m update
   fi
   git push
 }
 
-# function commit() {
-#   git add -A && git commit -m "$@" && git push
-# }
+# creare una funzione per clonare una repo direttamente nella current directory incollando il link e poi aprirla in vscode
+function newrepo() {
+  if [ "$1" != "" ]
+  then
+    gh repo create "$1" --confirm --public
+  else
+    echo "Inserisci un nome valido tra virgolette"
+  fi
+    #git remote add origin https://github.com/Frameck/${$1}.git && git branch -M main && git push -u origin main  ##questa riga non funziona
+    #git push --set-upstream origin main  ##questa riga non funziona
+    cd $PWD/$1 && code $PWD
+    # git remote add origin https://github.com/Frameck/${PWD/*\//}.git
+    # git branch -M main
+    # git push -u origin main
+}
+
+# ${PWD/*\//} => serve per prendere il nome della cartella dove è aperto il terminale
+function viewrepo() {
+  open https://github.com/Frameck/${PWD/*\//}
+}
+
+function openmamp() {
+  open -gj -a Mamp
+  open http://localhost:8888/${PWD/*\//}
+}

@@ -119,6 +119,7 @@ source $ZSH/oh-my-zsh.sh
 ### SYNTAX HIGHLIGHTING
 # man page highlight
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 ### PATH
 # Add Visual Studio Code (code)
@@ -135,6 +136,7 @@ alias ls='ls -lAFht' # aggiungendo la 't' si ordinano per ultima modifica e la '
 alias boolean='cd ~/Documents/Code/Boolean'
 alias botfirebase='cd ~/Documents/Code/Telegram/Bot\ Ristoranti/ProvaBotFirebase3'
 alias zoom='open https://us02web.zoom.us/j/81390299868?pwd=ZzVndWg1NnEybDVvT0VkUHZYeXRzZz09'
+alias brewbundle='brew bundle dump --force --describe'
 
 ### FUNCTIONS
 function mkcd() {

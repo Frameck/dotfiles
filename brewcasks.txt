@@ -1,0 +1,4 @@
+# Casks (Applications)
+cask "alfred"
+cask "google-chrome"
+cask "visual-studio-code"

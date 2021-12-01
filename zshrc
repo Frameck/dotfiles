@@ -133,9 +133,9 @@ alias ippublic='curl http://ipecho.net/plain; echo'
 alias iplocal='ipconfig getifaddr en0'
 alias update='source ~/.zshrc'
 alias ls='ls -lAFht' # aggiungendo la 't' si ordinano per ultima modifica e la 'r' ultima modifica reverse
+alias exa='exa -laFh --git'
 alias boolean='cd ~/Documents/Code/Boolean'
 alias botfirebase='cd ~/Documents/Code/Telegram/Bot\ Ristoranti/ProvaBotFirebase3'
-alias zoom='open https://us02web.zoom.us/j/81390299868?pwd=ZzVndWg1NnEybDVvT0VkUHZYeXRzZz09'
 alias brewbundle='brew bundle dump --force --describe'
 
 ### FUNCTIONS

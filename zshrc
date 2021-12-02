@@ -137,6 +137,7 @@ alias exa='exa -laFh --git'
 alias boolean='cd ~/Documents/Code/Boolean'
 alias botfirebase='cd ~/Documents/Code/Telegram/Bot\ Ristoranti/ProvaBotFirebase3'
 alias brewbundle='brew bundle dump --force --describe'
+alias man='batman'
 
 ### FUNCTIONS
 function mkcd() {

@@ -7,13 +7,15 @@
 - link:
     ~/.zshrc:
     ~/.gitconfig:
+    ~/.config:
+      create: true
+      path: config
 
 - create:
     - ~/Code
     - ~/.vim/undo-history
 
 - shell:
-  - 
-    command: ./setup_homebrew.zsh
-    stdout: true
-    stderr: true
+  - command: ./setup_homebrew.zsh
+      stdout: true
+      stderr: true

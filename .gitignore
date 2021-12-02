@@ -2,5 +2,6 @@ Brewfile.lock.json
 /config/.mono/
 /config/configstore/
 /config/filezilla/
+/config/firebase/
 /config/gh/
 /config/xbuild/

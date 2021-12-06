@@ -1,4 +1,4 @@
-source /Users/francesco/.bash_profile
+#source /Users/francesco/.bash_profile
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -120,6 +120,9 @@ source $ZSH/oh-my-zsh.sh
 # man page highlight
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export HOMEBREW_CASK_OPTS="--no-quarantine"
+export PATH=~/.npm-global/bin:$PATH
+export PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
+
 
 ### PATH
 # Add Visual Studio Code (code)

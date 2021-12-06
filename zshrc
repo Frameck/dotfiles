@@ -176,6 +176,16 @@ function newrepo() {
     # git push -u origin main
 }
 
+# function clonerepo() {
+#   if [ "$1" != "" ]
+#   then
+#     gh repo clone "$1"
+#   else
+#     echo "Inserisci un nome valido tra virgolette"
+#   fi
+#     cd $PWD/$1 && code $PWD
+# }
+
 # ${PWD/*\//} => serve per prendere il nome della cartella dove è aperto il terminale
 function viewrepo() {
   open https://github.com/Frameck/${PWD/*\//}

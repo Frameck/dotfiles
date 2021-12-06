@@ -5,3 +5,4 @@ Brewfile.lock.json
 /config/firebase/
 /config/gh/
 /config/xbuild/
+.DS_Store

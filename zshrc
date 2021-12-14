@@ -129,6 +129,7 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Add PHP
 export PATH="$PATH:/Applications/MAMP/bin/php/php7.4.21/bin"
+export PATH="$PATH:/Applications/MAMP/Library/bin"
 
 ### ALIAS
 alias usage='du -h -d1'

@@ -135,6 +135,7 @@ export PATH="$PATH:/Applications/MAMP/Library/bin"
 alias usage='du -h -d1'
 alias ippublic='curl http://ipecho.net/plain; echo'
 alias iplocal='ipconfig getifaddr en0'
+alias iplocal2='ipconfig getifaddr en1'
 alias update='source ~/.zshrc'
 alias ls='ls -lAFht' # aggiungendo la 't' si ordinano per ultima modifica e la 'r' ultima modifica reverse
 alias exa='exa -laFh --git'
@@ -198,4 +199,14 @@ function viewrepo() {
 function openmamp() {
   open -gj -a Mamp
   open http://localhost:8888/${PWD/*\//}
+}
+
+function newlaravel() {
+  if [ "$1" != "" ]
+  then
+    composer create-project --prefer-dist laravel/laravel:^7.0 "$1"
+  else
+    echo "Inserisci un nome valido tra virgolette"
+  fi
+    cd $PWD/$1 && code $PWD
 }

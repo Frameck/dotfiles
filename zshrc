@@ -129,11 +129,13 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Add PHP
 export PATH="$PATH:/Applications/MAMP/bin/php/php7.4.21/bin"
+export PATH="$PATH:/Applications/MAMP/Library/bin"
 
 ### ALIAS
 alias usage='du -h -d1'
 alias ippublic='curl http://ipecho.net/plain; echo'
 alias iplocal='ipconfig getifaddr en0'
+alias iplocal2='ipconfig getifaddr en1'
 alias update='source ~/.zshrc'
 alias ls='ls -lAFht' # aggiungendo la 't' si ordinano per ultima modifica e la 'r' ultima modifica reverse
 alias exa='exa -laFh --git'
@@ -197,4 +199,14 @@ function viewrepo() {
 function openmamp() {
   open -gj -a Mamp
   open http://localhost:8888/${PWD/*\//}
+}
+
+function newlaravel() {
+  if [ "$1" != "" ]
+  then
+    composer create-project --prefer-dist laravel/laravel:^7.0 "$1"
+  else
+    echo "Inserisci un nome valido tra virgolette"
+  fi
+    cd $PWD/$1 && code $PWD
 }

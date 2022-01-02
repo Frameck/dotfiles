@@ -140,6 +140,7 @@ alias update='source ~/.zshrc'
 alias ls='ls -lAFht' # aggiungendo la 't' si ordinano per ultima modifica e la 'r' ultima modifica reverse
 alias exa='exa -laFh --git'
 alias boolean='cd ~/Code/Boolean'
+alias scriptable='code ~/Library/Mobile\ Documents/iCloud~dk~simonbs~Scriptable/Documents'
 alias botfirebase='cd ~/Code/Telegram/Bot\ Ristoranti/ProvaBotFirebase3'
 alias brewbundle='brew bundle dump --force --describe'
 alias man='batman'

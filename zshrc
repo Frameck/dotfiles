@@ -170,13 +170,22 @@ function commitpush() {
 function newrepo() {
   if [ "$1" != "" ]
   then
-    gh repo create "$1" --confirm --public
+    gh repo create "$1" --public
   else
     echo "Inserisci un nome valido tra virgolette"
   fi
+    #gh repo clone "$1"
+    #cd $PWD/$1
+    mkdir -p "$@" && cd "$_"
+    git init
+    git add -A
+    git commit -m "Init project"
+    git branch -M main
+    git remote add origin "https://github.com/Frameck/${$1}.git"
+    git push -u origin main
     #git remote add origin https://github.com/Frameck/${$1}.git && git branch -M main && git push -u origin main  ##questa riga non funziona
     #git push --set-upstream origin main  ##questa riga non funziona
-    cd $PWD/$1 && code $PWD
+    code .
     # git remote add origin https://github.com/Frameck/${PWD/*\//}.git
     # git branch -M main
     # git push -u origin main

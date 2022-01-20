@@ -208,7 +208,8 @@ function viewrepo() {
 
 function openmamp() {
   open -gj -a Mamp
-  open http://localhost:8888/${PWD/*\//}
+  open "http://localhost:8888/phpMyAdmin5/index.php?route=/server/databases"
+  ##open http://localhost:8888/${PWD/*\//}
 }
 
 function newlaravel() {

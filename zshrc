@@ -144,6 +144,8 @@ alias scriptable='code ~/Library/Mobile\ Documents/iCloud~dk~simonbs~Scriptable/
 alias botfirebase='cd ~/Code/Telegram/Bot\ Ristoranti/ProvaBotFirebase3'
 alias brewbundle='brew bundle dump --force --describe'
 alias man='batman'
+alias pa='php artisan'
+alias pas='php artisan serve'
 
 ### FUNCTIONS
 function mkcd() {

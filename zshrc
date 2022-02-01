@@ -146,7 +146,7 @@ alias brewbundle='brew bundle dump --force --describe'
 alias man='batman'
 alias pa='php artisan'
 alias pas='php artisan serve'
-alias sitobutei='cd ~/Code/Butei/official-butei-site'
+alias sitobutei='cd ~/Code/Butei/official-butei-site && code .'
 
 ### FUNCTIONS
 function mkcd() {

@@ -130,6 +130,9 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # Add PHP
 export PATH="$PATH:/Applications/MAMP/bin/php/php7.4.21/bin"
 export PATH="$PATH:/Applications/MAMP/Library/bin"
+# Android Studio
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 ### ALIAS
 alias usage='du -h -d1'

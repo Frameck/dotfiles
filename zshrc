@@ -133,6 +133,8 @@ export PATH="$PATH:/Applications/MAMP/Library/bin"
 # Android Studio
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
+# Ruby
+export PATH=/opt/homebrew/lib/ruby/gems/2.7.0/bin:$PATH
 
 ### ALIAS
 alias usage='du -h -d1'

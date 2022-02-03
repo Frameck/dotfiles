@@ -243,3 +243,13 @@ function newmodel() {
     echo "Inserisci un nome valido tra virgolette"
   fi
 }
+
+function newbranch() {
+  if [ "$1" != "" ]
+  then
+    git checkout -b "$1"
+  else
+    echo "Inserisci un nome valido"
+  fi
+    echo "Successfully created new branch named $1"
+}

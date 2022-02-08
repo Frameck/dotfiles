@@ -253,3 +253,13 @@ function newbranch() {
   fi
     echo "Successfully created new branch named $1"
 }
+
+function fixgitcache() {
+  if [ "$1" != "" ]
+  then
+    git rm --cached "$1"
+  else
+    echo "Inserisci un nome valido per il file"
+  fi
+    echo "Successfully cleared cache for file: $1"
+}

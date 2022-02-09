@@ -152,6 +152,7 @@ alias man='batman'
 alias pa='php artisan'
 alias pas='php artisan serve'
 alias sitobutei='cd ~/Code/Butei/official-butei-site && code .'
+alias medicall='cd ~/Code/Boolean/Progetto\ finale/medicall && code . && openmamp'
 
 ### FUNCTIONS
 function mkcd() {

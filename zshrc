@@ -233,11 +233,6 @@ function newlaravel() {
 function newmodel() {
   if [ "$1" != "" ]
   then
-    echo "
-    Create a new Eloquent model class
-    Create a new resource controller for the model
-    Create a new migration file for the model
-    Create a new seeder file for the model"
     php artisan make:model "$1" -cmsr
   else
     echo "Inserisci un nome valido tra virgolette"

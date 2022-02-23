@@ -152,6 +152,7 @@ alias man='batman'
 alias pa='php artisan'
 alias pas='php artisan serve'
 alias sitobutei='cd ~/Code/Butei/official-butei-site && code .'
+alias webappcase='cd ~/Code/Case/webapp-gestione-case && code .'
 alias medicall='cd ~/Code/Boolean/Progetto\ finale/medicall && code . && openmamp'
 
 ### FUNCTIONS
@@ -161,7 +162,7 @@ function mkcd() {
 
 # funzione per navigare dentro la cartella Code dove sono presenti tutti i progetti di coding
 function cdcode() {
-  cd ~/Documents/Code/$1
+  cd ~/Code
 }
 
 function commitpush() {

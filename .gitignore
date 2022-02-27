@@ -6,3 +6,4 @@ Brewfile.lock.json
 /config/gh/
 /config/xbuild/
 .DS_Store
+gitconfig

@@ -232,6 +232,16 @@ function newlaravel() {
     cd $PWD/$1 && code $PWD
 }
 
+function scaffoldingLaravel() {
+  npm i bootstrap@5 @popperjs/core && npm remove jquery popper.js
+  echo "In 'resources/js/bootstrap.js' remove 'require('jquery')' and replace 'popper.js' with '@popperjs/core'"
+  composer require doctrine/dbal:^2 laravel/ui:^2.4 nesbot/carbon
+  composer remove fzaninotto/faker && composer require fakerphp/faker
+  php artisan ui vue --auth
+  npm i
+  echo "Scaffolding completed, remember to configure .env file"
+}
+
 function newmodel() {
   if [ "$1" != "" ]
   then

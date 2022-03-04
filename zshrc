@@ -152,7 +152,7 @@ alias man='batman'
 alias pa='php artisan'
 alias pas='php artisan serve'
 alias sitobutei='cd ~/Code/Butei/official-butei-site && code .'
-alias webappcase='cd ~/Code/Case/webapp-gestione-case && code .'
+alias webappcase='cd ~/Code/Case/webapp-gestione-case && code . && openmamp'
 alias medicall='cd ~/Code/Boolean/Progetto\ finale/medicall && code . && openmamp'
 
 ### FUNCTIONS

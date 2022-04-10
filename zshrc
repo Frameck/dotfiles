@@ -127,9 +127,17 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
 ### PATH
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # Add PHP
-export PATH="$PATH:/Applications/MAMP/bin/php/php7.4.21/bin"
-export PATH="$PATH:/Applications/MAMP/Library/bin"
+# export PATH="$PATH:/Applications/MAMP/bin/php/php7.4.21/bin"
+# export PATH="$PATH:/Applications/MAMP/Library/bin"
+export PATH="/usr/local/opt/php@8.0/bin:$PATH"
+export PATH="/usr/local/opt/php@8.0/sbin:$PATH"
+# export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+# export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+# export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
+# export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+
 # Android Studio
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
@@ -154,6 +162,10 @@ alias pas='php artisan serve'
 alias sitobutei='cd ~/Code/Butei/official-butei-site && code .'
 alias webappcase='cd ~/Code/Case/webapp-gestione-case && code . && openmamp'
 alias medicall='cd ~/Code/Boolean/Progetto\ finale/medicall && code . && openmamp'
+# alias clearlaravelcache='php artisan config:clear && php artisan route:clear && php artisan view:clear && php artisan event:clear && php artisan cache:clear'
+alias laravelcache='php artisan optimize:clear'
+alias composercache='composer dump-autoload'
+alias clearcache='laravelcache && composercache'
 
 ### FUNCTIONS
 function mkcd() {

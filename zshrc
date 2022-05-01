@@ -128,6 +128,8 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# export PATH="~/.composer/vendor/bin:$PATH"
+
 # Add PHP
 # export PATH="$PATH:/Applications/MAMP/bin/php/php7.4.21/bin"
 # export PATH="$PATH:/Applications/MAMP/Library/bin"
@@ -146,9 +148,10 @@ export PATH=/opt/homebrew/lib/ruby/gems/2.7.0/bin:$PATH
 
 ### ALIAS
 alias usage='du -h -d1'
-alias ippublic='curl http://ipecho.net/plain; echo'
-alias iplocal='ipconfig getifaddr en0'
-alias iplocal2='ipconfig getifaddr en1'
+alias publicip='curl http://ipecho.net/plain; echo'
+# alias localip='ipconfig getifaddr en0'
+alias localip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+# alias localip2='ipconfig getifaddr en1'
 alias update='source ~/.zshrc'
 alias ls='ls -lAFht' # aggiungendo la 't' si ordinano per ultima modifica e la 'r' ultima modifica reverse
 alias exa='exa -laFh --git'
@@ -157,15 +160,28 @@ alias scriptable='code ~/Library/Mobile\ Documents/iCloud~dk~simonbs~Scriptable/
 alias botfirebase='cd ~/Code/Telegram/Bot\ Ristoranti/ProvaBotFirebase3'
 alias brewbundle='brew bundle dump --force --describe'
 alias man='batman'
-alias pa='php artisan'
-alias pas='php artisan serve'
-alias sitobutei='cd ~/Code/Butei/official-butei-site && code .'
-alias webappcase='cd ~/Code/Case/webapp-gestione-case && code . && openmamp'
-alias medicall='cd ~/Code/Boolean/Progetto\ finale/medicall && code . && openmamp'
+alias sitobutei='cd ~/Code/Butei/official-butei-site && code . && openmamp'
+alias webappcase='cd ~/Code/Case/webapp-gestione-case-9 && code . && openmamp'
 # alias clearlaravelcache='php artisan config:clear && php artisan route:clear && php artisan view:clear && php artisan event:clear && php artisan cache:clear'
 alias laravelcache='php artisan optimize:clear'
 alias composercache='composer dump-autoload'
 alias clearcache='laravelcache && composercache'
+
+# LARAVEL ALIASES
+alias art='php artisan'
+alias pa='php artisan'
+alias pas='php artisan serve'
+alias par:l='php artisan route:list'
+alias pam='php artisan migrate'
+alias pam:c='php artisan make:component'
+alias pav='php artisan -V'
+alias c='composer'
+alias cr='composer require'
+alias cu='composer update'
+alias ci='composer install'
+
+# SSH HOSTINGER
+alias hostingerssh='ssh -p 65002 u229984210@212.107.17.205'
 
 ### FUNCTIONS
 function mkcd() {
@@ -175,6 +191,20 @@ function mkcd() {
 # funzione per navigare dentro la cartella Code dove sono presenti tutti i progetti di coding
 function cdcode() {
   cd ~/Code
+}
+
+function paslocal() {
+  php artisan serve --host=| grep "ipconfig getifaddr en1"
+}
+
+function commit() {
+  git add -A
+  if [ "$1" != "" ] # or better, if [ -n "$1" ]
+  then
+    git commit -m "$1"
+  else
+    git commit -m wip
+  fi
 }
 
 function commitpush() {

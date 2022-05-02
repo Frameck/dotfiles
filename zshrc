@@ -169,8 +169,11 @@ alias clearcache='laravelcache && composercache'
 
 # LARAVEL ALIASES
 alias art='php artisan'
+alias serve='php artisan serve'
+alias servelocal='php artisan serve --host=`localip`'
 alias pa='php artisan'
 alias pas='php artisan serve'
+alias paslocal='php artisan serve --host=`localip`'
 alias par:l='php artisan route:list'
 alias pam='php artisan migrate'
 alias pam:c='php artisan make:component'

@@ -166,6 +166,8 @@ alias webappcase='cd ~/Code/Case/webapp-gestione-case-9 && code . && openmamp'
 alias laravelcache='php artisan optimize:clear'
 alias composercache='composer dump-autoload'
 alias clearcache='laravelcache && composercache'
+alias startmailhog='brew services start mailhog'
+alias stopmailhog='brew services stop mailhog'
 
 # LARAVEL ALIASES
 alias art='php artisan'

@@ -128,6 +128,9 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# Composer
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
 # export PATH="~/.composer/vendor/bin:$PATH"
 
 # Add PHP

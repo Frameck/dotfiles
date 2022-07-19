@@ -188,6 +188,8 @@ alias c='composer'
 alias cr='composer require'
 alias cu='composer update'
 alias ci='composer install'
+alias gst='git status'
+alias gp='git push'
 
 # SSH HOSTINGER
 alias hostingerssh='ssh -p 65002 u229984210@212.107.17.205'

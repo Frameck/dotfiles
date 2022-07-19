@@ -206,6 +206,16 @@ function paslocal() {
   php artisan serve --host=| grep "ipconfig getifaddr en1"
 }
 
+function gc() {
+  git add -A
+  if [ "$1" != "" ] # or better, if [ -n "$1" ]
+  then
+    git commit -m "$1"
+  else
+    git commit -m wip
+  fi
+}
+
 function commit() {
   git add -A
   if [ "$1" != "" ] # or better, if [ -n "$1" ]
@@ -269,14 +279,14 @@ function viewrepo() {
 
 function openmamp() {
   open -gj -a Mamp
-  open "http://localhost:8888/phpMyAdmin5/index.php?route=/server/databases"
+  # open "http://localhost:8888/phpMyAdmin5/index.php?route=/server/databases"
   ##open http://localhost:8888/${PWD/*\//}
 }
 
 function newlaravel() {
   if [ "$1" != "" ]
   then
-    composer create-project --prefer-dist laravel/laravel:^7.0 "$1"
+    composer create-project laravel/laravel "$1"
   else
     echo "Inserisci un nome valido tra virgolette"
   fi
